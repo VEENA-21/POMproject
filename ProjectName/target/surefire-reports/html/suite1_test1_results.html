@@ -29,7 +29,7 @@
 	    		<span class="tooltiptextCustom">Copy Test name</span>
 			</div>
 	    </th>
-	    <th id="testNameId">Test</th> 
+	    <th id="testNameId">Command line test</th> 
 	  </tr>
 	  <tr>
 	    <th>Test Class : </th>
@@ -54,7 +54,7 @@
 	    		<span class="tooltiptextCustom">Copy Suite name</span>
 			</div>
 		</th>
-	    <th id="suiteNameId">Suite</th>
+	    <th id="suiteNameId">Command line suite</th>
 	  </tr>
 	  <tr>
 	    <th>Suite XML : </th>
@@ -68,13 +68,13 @@
 	    		<span class="tooltiptextCustom">Copy Suite file name</span>
 			</div>
 	    </th> 
-	  	<th id="suiteXMLId">C:\Users\subba\OneDrive\Desktop\App2\POMproject\ProjectName\testng.xml</th>
-	  	<th id="suiteXMLNameId" hidden="true">testng.xml</th>
+	  	<th id="suiteXMLId">$utils.getSuiteXMLName($result)</th>
+	  	<th id="suiteXMLNameId" hidden="true">$utils.getSuiteXMLFileName($result)</th>
 	  </tr>
 	  	  <tr>
 	    <th>Total Time : </th>
 	    <th></th>
-	    <th>00:00:00</th> 
+	    <th>00:00:19</th> 
 	  </tr>
 	  <tr>
 	    <th>Total Steps : </th>
@@ -84,7 +84,7 @@
 	  <tr>
 	    <th>Status : </th>
 	    <th></th>
-	    <th><font color="yellow">SKIP</font></th> 
+	    <th><font color="green">PASS</font></th> 
 	  </tr>
 	</table>
 </div>
@@ -106,805 +106,112 @@
 		</thead>
 		<tbody>
 		
-									<tr>
-		<td class="time">1742020960321</td>
-		<td class="header failedConfig" colspan="4" onClick="toggleElement('e29c4ea0-704b-47e9-96f2-791b1daba272','block');changeSingleIcon('span-e29c4ea0-704b-47e9-96f2-791b1daba272');" title="Click to expand/collapse" style="cursor: pointer;">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-e29c4ea0-704b-47e9-96f2-791b1daba272' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-			<tr>
-		<td class="time">1742020960321</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test1</span><br>
-		<span class="description"><b>Method: </b>openBrowser</span><br>
-				<span class="duration"><b>Duration: </b>0.059s</span><br>
-		</td>
-		<td class="resultConfiguration">
-										<div class="stackTrace" id="e29c4ea0-704b-47e9-96f2-791b1daba272">
-								<a href="javascript:toggleElement('exception-e29c4ea0-704b-47e9-96f2-791b1daba272','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br>
-		    <div class="stackTrace" id="exception-e29c4ea0-704b-47e9-96f2-791b1daba272">
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br>
-							Browser.browser.openBrowser(browser.java:11)<br>
-							TestCaseDemo.Test1.openBrowser(Test1.java:36)<br>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br>
-							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br>
-							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br>
-							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br>
-							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br>
-							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br>
-							org.testng.TestRunner.run(TestRunner.java:614)<br>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br>
-							org.testng.TestNG.run(TestNG.java:1079)<br>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br>
-									    <b>Caused by: </b> <a href="javascript:toggleElement('causedBy-e29c4ea0-704b-47e9-96f2-791b1daba272','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br>
-			    <div class="stackTrace" id="causedBy-e29c4ea0-704b-47e9-96f2-791b1daba272">
-									org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br>
-									org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br>
-									org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br>
-									org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br>
-									Browser.browser.openBrowser(browser.java:11)<br>
-									TestCaseDemo.Test1.openBrowser(Test1.java:36)<br>
-									java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
-									java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
-									org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br>
-									org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br>
-									org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br>
-									org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br>
-									org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br>
-									org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br>
-									org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br>
-									org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br>
-									org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br>
-									org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br>
-									org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br>
-									org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br>
-									java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
-									org.testng.TestRunner.privateRun(TestRunner.java:739)<br>
-									org.testng.TestRunner.run(TestRunner.java:614)<br>
-									org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br>
-									org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br>
-									org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br>
-									org.testng.SuiteRunner.run(SuiteRunner.java:312)<br>
-									org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
-									org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
-									org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br>
-									org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br>
-									org.testng.TestNG.runSuites(TestNG.java:1112)<br>
-									org.testng.TestNG.run(TestNG.java:1079)<br>
-									org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br>
-									org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br>
-									org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br>
-								</div>
-						</div>
-				</div>
-		</td>
-	</tr>
-							<tr>
-		<td class="time">1742020960535</td>
-		<td class="header failedConfig" colspan="4" onClick="toggleElement('b8d97350-36f5-4941-bcb3-6de2fee9eb9b','block');changeSingleIcon('span-b8d97350-36f5-4941-bcb3-6de2fee9eb9b');" title="Click to expand/collapse" style="cursor: pointer;">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
-		<div style="float:right;">@BeforeClass &nbsp;&nbsp;<span id='span-b8d97350-36f5-4941-bcb3-6de2fee9eb9b' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-			<tr>
-		<td class="time">1742020960535</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test2</span><br>
-		<span class="description"><b>Method: </b>setup</span><br>
-				<span class="duration"><b>Duration: </b>0.003s</span><br>
-		</td>
-		<td class="resultConfiguration">
-										<div class="stackTrace" id="b8d97350-36f5-4941-bcb3-6de2fee9eb9b">
-								<a href="javascript:toggleElement('exception-b8d97350-36f5-4941-bcb3-6de2fee9eb9b','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br>
-		    <div class="stackTrace" id="exception-b8d97350-36f5-4941-bcb3-6de2fee9eb9b">
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br>
-							TestCaseDemo.Test2.setup(Test2.java:36)<br>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br>
-							org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br>
-							org.testng.TestRunner.run(TestRunner.java:614)<br>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br>
-							org.testng.TestNG.run(TestNG.java:1079)<br>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br>
-									    <b>Caused by: </b> <a href="javascript:toggleElement('causedBy-b8d97350-36f5-4941-bcb3-6de2fee9eb9b','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br>
-			    <div class="stackTrace" id="causedBy-b8d97350-36f5-4941-bcb3-6de2fee9eb9b">
-									org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br>
-									org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br>
-									org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br>
-									org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br>
-									org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br>
-									TestCaseDemo.Test2.setup(Test2.java:36)<br>
-									java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
-									java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
-									org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br>
-									org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br>
-									org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br>
-									org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br>
-									org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br>
-									org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br>
-									java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
-									org.testng.TestRunner.privateRun(TestRunner.java:739)<br>
-									org.testng.TestRunner.run(TestRunner.java:614)<br>
-									org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br>
-									org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br>
-									org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br>
-									org.testng.SuiteRunner.run(SuiteRunner.java:312)<br>
-									org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
-									org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
-									org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br>
-									org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br>
-									org.testng.TestNG.runSuites(TestNG.java:1112)<br>
-									org.testng.TestNG.run(TestNG.java:1079)<br>
-									org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br>
-									org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br>
-									org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br>
-									org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br>
-								</div>
-						</div>
-				</div>
-		</td>
-	</tr>
-						
-					    				<tr>
-		<td class="time">1742020960511</td>
-		<td class="header skippedConfig" colspan="4" onClick="toggleElement('9769bc6e-dce3-46d8-ba82-d2cd2300b592','block');changeSingleIcon('span-9769bc6e-dce3-46d8-ba82-d2cd2300b592');" title="Click to expand/collapse">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-9769bc6e-dce3-46d8-ba82-d2cd2300b592' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-		<tr>
-		<td class="time">1742020960511</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test1</span><br>
-		<span class="description"><b>Method: </b>closeBrowser</span><br>
-				<span class="duration"><b>Duration: </b>0.000s</span><br>
-		</td>
-		<td class="resultConfiguration">
-				 														<div class="stackTrace" id="9769bc6e-dce3-46d8-ba82-d2cd2300b592">
-							</div>
-		</td>
-	</tr>
-				<tr>
-		<td class="time">1742020960518</td>
-		<td class="header skippedConfig" colspan="4" onClick="toggleElement('2f139e24-30e7-4136-b1b1-3b471d58c8e6','block');changeSingleIcon('span-2f139e24-30e7-4136-b1b1-3b471d58c8e6');" title="Click to expand/collapse">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-2f139e24-30e7-4136-b1b1-3b471d58c8e6' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-		<tr>
-		<td class="time">1742020960518</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test1</span><br>
-		<span class="description"><b>Method: </b>openBrowser</span><br>
-				<span class="duration"><b>Duration: </b>0.000s</span><br>
-		</td>
-		<td class="resultConfiguration">
-				 														<div class="stackTrace" id="2f139e24-30e7-4136-b1b1-3b471d58c8e6">
-							</div>
-		</td>
-	</tr>
-				<tr>
-		<td class="time">1742020960594</td>
-		<td class="header skippedConfig" colspan="4" onClick="toggleElement('68117a11-c59d-442b-bd9c-93ae99b0ee52','block');changeSingleIcon('span-68117a11-c59d-442b-bd9c-93ae99b0ee52');" title="Click to expand/collapse">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-		<div style="float:right;">@AfterSuite &nbsp;&nbsp;<span id='span-68117a11-c59d-442b-bd9c-93ae99b0ee52' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-		<tr>
-		<td class="time">1742020960594</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test1</span><br>
-		<span class="description"><b>Method: </b>generateReport</span><br>
-				<span class="duration"><b>Duration: </b>0.000s</span><br>
-		</td>
-		<td class="resultConfiguration">
-				 														<div class="stackTrace" id="68117a11-c59d-442b-bd9c-93ae99b0ee52">
-							</div>
-		</td>
-	</tr>
-				<tr>
-		<td class="time">1742020960529</td>
-		<td class="header skippedConfig" colspan="4" onClick="toggleElement('d9d8687a-830a-4af3-85f0-416fb7e342c2','block');changeSingleIcon('span-d9d8687a-830a-4af3-85f0-416fb7e342c2');" title="Click to expand/collapse">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-d9d8687a-830a-4af3-85f0-416fb7e342c2' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-		<tr>
-		<td class="time">1742020960529</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test1</span><br>
-		<span class="description"><b>Method: </b>closeBrowser</span><br>
-				<span class="duration"><b>Duration: </b>0.000s</span><br>
-		</td>
-		<td class="resultConfiguration">
-				 														<div class="stackTrace" id="d9d8687a-830a-4af3-85f0-416fb7e342c2">
-							</div>
-		</td>
-	</tr>
-	    	    				<tr>
-		<td class="time">1742020960570</td>
-		<td class="header skippedConfig" colspan="4" onClick="toggleElement('fafb95b9-48e8-48f5-96a8-6050e648ded8','block');changeSingleIcon('span-fafb95b9-48e8-48f5-96a8-6050e648ded8');" title="Click to expand/collapse">
-		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
-		<div style="float:right;">@AfterClass &nbsp;&nbsp;<span id='span-fafb95b9-48e8-48f5-96a8-6050e648ded8' class="glyphicon glyphicon-menu-down"></span></div>
-		</td>
-	</tr>
-		<tr>
-		<td class="time">1742020960570</td>
-		<td class="methodConfiguration">
-				<span class="description"><b>Class: </b>class TestCaseDemo.Test2</span><br>
-		<span class="description"><b>Method: </b>close</span><br>
-				<span class="duration"><b>Duration: </b>0.000s</span><br>
-		</td>
-		<td class="resultConfiguration">
-				 														<div class="stackTrace" id="fafb95b9-48e8-48f5-96a8-6050e648ded8">
-							</div>
-		</td>
-	</tr>
-	    	    		
-												
 				
-											<tr>
-	<td class="time">1742020960522</td>
-	<td class="header skipped" colspan="4" onClick="toggleElement('817c5a82-4dc7-47a5-b1a0-f3c1de0e299c','block');changeSingleIcon('span-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1742020960522</td>
-	<td class="methodTest">
-		<span class="description"><b>Method: </b>loginFunctionality</span><br>
-			<span class="description"><b>Description: </b></span><br>
-				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
-						<span class="duration"><b>Duration: </b>0.000s</span><br>
-	</td>
-	<td class="result">
-		 									<div class="stackTrace" id="817c5a82-4dc7-47a5-b1a0-f3c1de0e299c" style="display: block;">
-						<a href="javascript:toggleElement('exception-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br/>
-		<div class="stackTrace" id="exception-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c">
-					org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br/>
-					org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-					Browser.browser.openBrowser(browser.java:11)<br/>
-					TestCaseDemo.Test1.openBrowser(Test1.java:36)<br/>
-					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-					org.testng.TestRunner.run(TestRunner.java:614)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-					org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-					org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br/>
-			<div class="stackTrace" id="causedBy-817c5a82-4dc7-47a5-b1a0-f3c1de0e299c">
-							org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-							Browser.browser.openBrowser(browser.java:11)<br/>
-							TestCaseDemo.Test1.openBrowser(Test1.java:36)<br/>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-							org.testng.TestRunner.run(TestRunner.java:614)<br/>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-							org.testng.TestNG.run(TestNG.java:1079)<br/>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-						</div>
-				</div>
-		</td>
-	</div>
-</tr>
-					<tr>
-	<td class="time">1742020960501</td>
-	<td class="header skipped" colspan="4" onClick="toggleElement('1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc','block');changeSingleIcon('span-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1742020960501</td>
+				
+																
+				
+				
+												<tr>
+			<td class="time">1742020328022</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8cc7c876-71ec-4059-810c-a6c7820d8de9','block');changeSingleIcon('span-8cc7c876-71ec-4059-810c-a6c7820d8de9');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-8cc7c876-71ec-4059-810c-a6c7820d8de9' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1742020328022</td>
 	<td class="methodTest">
 		<span class="description"><b>Method: </b>titleTest</span><br>
 			<span class="description"><b>Description: </b></span><br>
 				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
-						<span class="duration"><b>Duration: </b>0.000s</span><br>
+						<span class="duration"><b>Duration: </b>0.045s</span><br>
 	</td>
 	<td class="result">
-		 									<div class="stackTrace" id="1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc" style="display: block;">
-						<a href="javascript:toggleElement('exception-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br/>
-		<div class="stackTrace" id="exception-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc">
-					org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br/>
-					org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-					Browser.browser.openBrowser(browser.java:11)<br/>
-					TestCaseDemo.Test1.openBrowser(Test1.java:36)<br/>
-					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-					org.testng.TestRunner.run(TestRunner.java:614)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-					org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-					org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br/>
-			<div class="stackTrace" id="causedBy-1b4e0f9c-eaa5-45a9-9ed1-94df866c6bcc">
-							org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-							Browser.browser.openBrowser(browser.java:11)<br/>
-							TestCaseDemo.Test1.openBrowser(Test1.java:36)<br/>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br/>
-							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-							org.testng.TestRunner.run(TestRunner.java:614)<br/>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-							org.testng.TestNG.run(TestNG.java:1079)<br/>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-						</div>
-				</div>
-		</td>
+						<div class="stackTrace" id="8cc7c876-71ec-4059-810c-a6c7820d8de9" style="display: block;">
+					</td>
 	</div>
 </tr>
-									<tr>
-	<td class="time">1742020960552</td>
-	<td class="header skipped" colspan="4" onClick="toggleElement('18b2b009-175f-421f-a75c-deeff1afe18a','block');changeSingleIcon('span-18b2b009-175f-421f-a75c-deeff1afe18a');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-18b2b009-175f-421f-a75c-deeff1afe18a' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1742020960552</td>
+						<tr>
+			<td class="time">1742020331769</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8afd4972-e052-4395-bea0-1535dcbb5422','block');changeSingleIcon('span-8afd4972-e052-4395-bea0-1535dcbb5422');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test1</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-8afd4972-e052-4395-bea0-1535dcbb5422' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1742020331769</td>
 	<td class="methodTest">
 		<span class="description"><b>Method: </b>loginFunctionality</span><br>
 			<span class="description"><b>Description: </b></span><br>
 				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
-						<span class="duration"><b>Duration: </b>0.000s</span><br>
+						<span class="duration"><b>Duration: </b>1.891s</span><br>
 	</td>
 	<td class="result">
-		 									<div class="stackTrace" id="18b2b009-175f-421f-a75c-deeff1afe18a" style="display: block;">
-						<a href="javascript:toggleElement('exception-18b2b009-175f-421f-a75c-deeff1afe18a','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br/>
-		<div class="stackTrace" id="exception-18b2b009-175f-421f-a75c-deeff1afe18a">
-					org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br/>
-					org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-					TestCaseDemo.Test2.setup(Test2.java:36)<br/>
-					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-					org.testng.TestRunner.run(TestRunner.java:614)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-					org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-					org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-18b2b009-175f-421f-a75c-deeff1afe18a','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br/>
-			<div class="stackTrace" id="causedBy-18b2b009-175f-421f-a75c-deeff1afe18a">
-							org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-							TestCaseDemo.Test2.setup(Test2.java:36)<br/>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-							org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br/>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-							org.testng.TestRunner.run(TestRunner.java:614)<br/>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-							org.testng.TestNG.run(TestNG.java:1079)<br/>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-						</div>
-				</div>
-		</td>
+						<div class="stackTrace" id="8afd4972-e052-4395-bea0-1535dcbb5422" style="display: block;">
+					</td>
 	</div>
 </tr>
-					<tr>
-	<td class="time">1742020960564</td>
-	<td class="header skipped" colspan="4" onClick="toggleElement('ec43d57d-31e7-4ff5-b965-51a8cab078e5','block');changeSingleIcon('span-ec43d57d-31e7-4ff5-b965-51a8cab078e5');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-ec43d57d-31e7-4ff5-b965-51a8cab078e5' class="glyphicon glyphicon-menu-down"></span></div>
+										<tr>
+			<td class="time">1742020337962</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('5b2ef59a-87fa-4acc-ae0d-55353d9797ef','block');changeSingleIcon('span-5b2ef59a-87fa-4acc-ae0d-55353d9797ef');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-5b2ef59a-87fa-4acc-ae0d-55353d9797ef' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1742020337962</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>loginFunctionality</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>1.830s</span><br>
 	</td>
-	</tr>
-<tr>
-	<td class="time">1742020960564</td>
+	<td class="result">
+						<div class="stackTrace" id="5b2ef59a-87fa-4acc-ae0d-55353d9797ef" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1742020339796</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('be832a97-eec9-487e-b3c2-6b7f846ce2d2','block');changeSingleIcon('span-be832a97-eec9-487e-b3c2-6b7f846ce2d2');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-be832a97-eec9-487e-b3c2-6b7f846ce2d2' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1742020339796</td>
 	<td class="methodTest">
 		<span class="description"><b>Method: </b>checkMyInfo</span><br>
 			<span class="description"><b>Description: </b></span><br>
 				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
-						<span class="duration"><b>Duration: </b>0.000s</span><br>
+						<span class="duration"><b>Duration: </b>1.597s</span><br>
 	</td>
 	<td class="result">
-		 							<i>Depends on method(s): </i>
-			<span class="dependency">TestCaseDemo.Test2.loginFunctionality</span>
-							<div class="stackTrace" id="ec43d57d-31e7-4ff5-b965-51a8cab078e5" style="display: block;">
-												==============================================================================================<br>
-												Total Passed: 0(+0), Failures: 0(+0), Skips: 5(+5)<br>
-												==============================================================================================<br>
-									<a href="javascript:toggleElement('exception-ec43d57d-31e7-4ff5-b965-51a8cab078e5','block')" title="Click to expand/collapse"><b>java.lang.Throwable: Method TestCaseDemo.Test2.checkMyInfo() on instance TestCaseDemo.Test2@6f8e8894 depends on not successfully finished methods <br/>
-[TestCaseDemo.Test2.loginFunctionality() on instance TestCaseDemo.Test2@6f8e8894]</b></a><br/>
-		<div class="stackTrace" id="exception-ec43d57d-31e7-4ff5-b965-51a8cab078e5">
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-					org.testng.TestRunner.run(TestRunner.java:614)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-					org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-					org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-						</div>
-		</td>
+						<div class="stackTrace" id="be832a97-eec9-487e-b3c2-6b7f846ce2d2" style="display: block;">
+					</td>
 	</div>
 </tr>
-					<tr>
-	<td class="time">1742020960546</td>
-	<td class="header skipped" colspan="4" onClick="toggleElement('f6939560-1213-4146-9df1-7dc591742c15','block');changeSingleIcon('span-f6939560-1213-4146-9df1-7dc591742c15');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
-	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-f6939560-1213-4146-9df1-7dc591742c15' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1742020960546</td>
+						<tr>
+			<td class="time">1742020337948</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('6c9485db-335f-4e80-9b26-e2e0a7462d15','block');changeSingleIcon('span-6c9485db-335f-4e80-9b26-e2e0a7462d15');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>TestCaseDemo.Test2</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-6c9485db-335f-4e80-9b26-e2e0a7462d15' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1742020337948</td>
 	<td class="methodTest">
 		<span class="description"><b>Method: </b>checkTitle</span><br>
 			<span class="description"><b>Description: </b></span><br>
 				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
-						<span class="duration"><b>Duration: </b>0.000s</span><br>
+						<span class="duration"><b>Duration: </b>0.011s</span><br>
 	</td>
 	<td class="result">
-		 									<div class="stackTrace" id="f6939560-1213-4146-9df1-7dc591742c15" style="display: block;">
-						<a href="javascript:toggleElement('exception-f6939560-1213-4146-9df1-7dc591742c15','block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/<br/>
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;<br/>
-Driver info: driver.version: ChromeDriver</b></a><br/>
-		<div class="stackTrace" id="exception-f6939560-1213-4146-9df1-7dc591742c15">
-					org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)<br/>
-					org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-					org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-					TestCaseDemo.Test2.setup(Test2.java:36)<br/>
-					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-					org.testng.TestRunner.run(TestRunner.java:614)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-					org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-					org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-					org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-f6939560-1213-4146-9df1-7dc591742c15','block')" title="Click to expand/collapse">java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe</a><br/>
-			<div class="stackTrace" id="causedBy-f6939560-1213-4146-9df1-7dc591742c15">
-							org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:475)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)<br/>
-							org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)<br/>
-							org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)<br/>
-							TestCaseDemo.Test2.setup(Test2.java:36)<br/>
-							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
-							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br/>
-							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br/>
-							org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br/>
-							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
-							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
-							org.testng.TestRunner.privateRun(TestRunner.java:739)<br/>
-							org.testng.TestRunner.run(TestRunner.java:614)<br/>
-							org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-							org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-							org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-							org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-							org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-							org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-							org.testng.TestNG.run(TestNG.java:1079)<br/>
-							org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)<br/>
-							org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br/>
-							org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)<br/>
-							org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)<br/>
-						</div>
-				</div>
-		</td>
+						<div class="stackTrace" id="6c9485db-335f-4e80-9b26-e2e0a7462d15" style="display: block;">
+					</td>
 	</div>
 </tr>
-						
-			  
+					  
 	</tbody>
 	</table>
 </div>

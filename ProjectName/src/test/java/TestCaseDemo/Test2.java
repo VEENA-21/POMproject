@@ -19,6 +19,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Test2 {
     WebDriver driver;
     WebDriverWait wait;
@@ -26,39 +28,48 @@ public class Test2 {
     ExtentTest logger;
 
     @BeforeClass
-
-    // Steup the driver
     public void setup() {
-        // Initialize Extent Reports
-        extent = new ExtentReports();
-        ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/target/ExtentReports/TestReport.html");
-        extent.attachReporter(spark);
+        try {
+            // Initialize ExtentReports
+            ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/target/ExtentReports/TestReport.html");
+            extent = new ExtentReports();
+            extent.attachReporter(spark);
 
-        System.setProperty("webdriver.chrome.driver", "C:\\JAR\\chromedriver-win64\\chromedriver.exe"); // Update path to chromedriver
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            // Initialize WebDriver using WebDriverManager
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        logger = extent.createTest("Setup - Browser Opened");
-        logger.log(Status.INFO, "Browser Opened Successfully");
+            // Navigate to the application URL
+            driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+            // Log setup success
+            logger = extent.createTest("Setup - Browser Opened");
+            logger.log(Status.INFO, "Browser Opened Successfully");
+        } catch (Exception e) {
+            if (logger != null) {
+                logger.log(Status.FAIL, "Setup failed: " + e.getMessage());
+            }
+            throw e; // Re-throw the exception to fail the test
+        }
     }
 
     @Test(priority = 1)
     public void checkTitle() {
         logger = extent.createTest("Check Title");
-        String actualTitle = driver.getTitle();
         try {
+            String actualTitle = driver.getTitle();
             Assert.assertTrue(actualTitle.contains("OrangeHRM"), "Title does not match!");
             logger.log(Status.PASS, "Title Verified: " + actualTitle);
         } catch (AssertionError e) {
-            logger.log(Status.FAIL, "Title Verification Failed: Expected 'OrangeHRM', but found " + actualTitle);
+            logger.log(Status.FAIL, "Title Verification Failed: Expected 'OrangeHRM', but found " + driver.getTitle());
             throw e;
         }
     }
 
     @Test(priority = 2)
-    public void loginFunctionality() throws Exception {
+    public void loginFunctionality() {
         logger = extent.createTest("Login Functionality");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username"))).sendKeys("Admin");
@@ -75,7 +86,7 @@ public class Test2 {
     }
 
     @Test(priority = 3, dependsOnMethods = "loginFunctionality")
-    public void checkMyInfo() throws Exception {
+    public void checkMyInfo() {
         logger = extent.createTest("Check My Info");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='My Info']"))).click();
@@ -91,23 +102,26 @@ public class Test2 {
 
     @AfterClass
     public void close() {
-        driver.quit();
-        logger = extent.createTest("Close Browser");
-        logger.log(Status.INFO, "Browser Closed Successfully");
-        extent.flush();
-
-        // Automatically open the report after execution
         try {
-            File reportFile = new File(System.getProperty("user.dir") + "/target/ExtentReports/TestReport.html");
-            java.awt.Desktop.getDesktop().browse(reportFile.toURI());
-        } catch (IOException e) {
-            e.printStackTrace();
+            if (driver != null) {
+                driver.quit();
+            }
+            logger = extent.createTest("Close Browser");
+            logger.log(Status.INFO, "Browser Closed Successfully");
+        } finally {
+            // Flush the ExtentReports to generate the report
+            extent.flush();
+
+            // Automatically open the report after execution
+            try {
+                File reportFile = new File(System.getProperty("user.dir") + "/target/ExtentReports/TestReport.html");
+                java.awt.Desktop.getDesktop().browse(reportFile.toURI());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
-
-
-
 
 
 

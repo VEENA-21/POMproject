@@ -1,26 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 2, Errors: 0, Skipped: 10, Time elapsed: 1.561 s <<< FAILURE! - in TestSuite
-TestCaseDemo.Test1.openBrowser  Time elapsed: 1.114 s  <<< FAILURE!
-org.openqa.selenium.remote.NoSuchDriverException: 
-Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: driver.version: ChromeDriver
-	at TestCaseDemo.Test1.openBrowser(Test1.java:36)
-Caused by: java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
-	at TestCaseDemo.Test1.openBrowser(Test1.java:36)
-
-TestCaseDemo.Test2.setup  Time elapsed: 0.023 s  <<< FAILURE!
-org.openqa.selenium.remote.NoSuchDriverException: 
-Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: driver.version: ChromeDriver
-	at TestCaseDemo.Test2.setup(Test2.java:36)
-Caused by: java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
-	at TestCaseDemo.Test2.setup(Test2.java:36)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.324 sec

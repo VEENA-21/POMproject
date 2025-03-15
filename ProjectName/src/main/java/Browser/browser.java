@@ -7,7 +7,7 @@ public class browser {
     public static WebDriver driver;
 
     public WebDriver openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\JAR\\chromedriver-win64\\chromedriver.exe"); // Update path to chromedriver
+    	System.setProperty("webdriver.chrome.driver", "C:\\JAR\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         return driver;
     }
@@ -16,6 +16,8 @@ public class browser {
         driver.get(url);
     }
 
+    // Close Browser
+    
     public void closeBrowser() {
         if (driver != null) {
             driver.quit();

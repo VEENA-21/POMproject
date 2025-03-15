@@ -1,6 +1,10 @@
 package TestCaseDemo;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -28,8 +32,6 @@ public class Test1 {
     }
 
     @BeforeMethod
-
-    // Open Brwoser
     public void openBrowser() throws Exception {
         logger = extent.createTest("Browser Setup");
 
@@ -67,24 +69,27 @@ public class Test1 {
     }
 
     @Test(priority = 2)
+  //  @Test(priority = 2)
     public void loginFunctionality() throws InterruptedException {
         logger = extent.createTest("Login Functionality Test");
         
         page1.login("Admin", "admin123");  
         logger.log(Status.INFO, "Logged in with username: Admin and password: admin123");
 
-        // Verify successful login using an element check instead of title
-        boolean loginSuccess = page1.isDashboardVisible();  // Ensure isDashboardVisible() method is implemented in page1
+        // Wait for dashboard visibility
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        boolean loginSuccess = wait.until(ExpectedConditions.urlContains("dashboard"));
 
         if (loginSuccess) {
-            logger.log(Status.PASS, "Login functionality executed successfully");
+            logger.log(Status.PASS, "Login successful");
         } else {
-            logger.log(Status.FAIL, "Login failed. Dashboard not visible.");
             capture.screenShot("LoginFailure", driver);
+            logger.log(Status.FAIL, "Login failed.");
             logger.addScreenCaptureFromPath("Screenshots/LoginFailure.png");
             Assert.fail("Login failed.");
         }
     }
+
 
     @AfterMethod
     public void closeBrowser() {
