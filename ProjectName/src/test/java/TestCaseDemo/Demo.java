@@ -12,7 +12,7 @@ public class Demo {
         browser browserInstance = new browser(); // Create an instance of the browser class
 
         try {
-            // Open browser and get driver reference
+            // Open browser and get driver reference without errors
             driver = browserInstance.openBrowser();
             
             // Navigate to URL
