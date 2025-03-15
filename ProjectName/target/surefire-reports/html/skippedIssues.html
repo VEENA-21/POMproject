@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/reportng.css" />
+	<script type="text/javascript">  
+    	$(document).ready(function () {  
+	            $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click(function () {  
+	                    $(this).siblings('.child-' + this.id).toggle();  
+	                });
+	                $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click();
+	    });
+	    function changeIcon(elementId) {
+			if ($('#'+elementId).hasClass('glyphicon glyphicon-minus')){
+				$('#'+elementId).removeClass('glyphicon glyphicon-minus').toggleClass('glyphicon glyphicon-plus');
+			}else{
+				$('#'+elementId).removeClass('glyphicon glyphicon-plus').toggleClass('glyphicon glyphicon-minus');
+			}
+		}
+		function showReport(element,report){$(element).children(".tipFrame").attr('src', report).show();}
+		function hideReport(element){$(element).children(".tipFrame").hide();}
+    </script>
+</head>
+<body>
+<h3 class="skipTitle">Skipped</h3>
+<div>
+	<div class="well well-large">
+	<h4>Regression Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="parent" id="row0" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-df2b2445-ab54-49f1-b308-f82b6229b662'); ">
+<td><span id="span-df2b2445-ab54-49f1-b308-f82b6229b662" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">Depends on not successfully finished methods</td><td>1</td><td></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite">Suite</a></td><td><a href="suite1_test1_results.html">Test</a></td><td class="break-word">TestCaseDemo.Test2</td></tr>
+<tr class="parent" id="row1" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-b189607e-5899-47da-a7a2-f447962f7a04'); ">
+<td><span id="span-b189607e-5899-47da-a7a2-f447962f7a04" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: driver.version: ChromeDriver</td><td>4</td><td></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite">Suite</a></td><td><a href="suite1_test1_results.html">Test</a></td><td class="break-word">TestCaseDemo.Test1</td></tr>
+<tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite">Suite</a></td><td><a href="suite1_test1_results.html">Test</a></td><td class="break-word">TestCaseDemo.Test2</td></tr>
+<tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite">Suite</a></td><td><a href="suite1_test1_results.html">Test</a></td><td class="break-word">TestCaseDemo.Test1</td></tr>
+<tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite">Suite</a></td><td><a href="suite1_test1_results.html">Test</a></td><td class="break-word">TestCaseDemo.Test2</td></tr>
+
+			</tbody>
+	</table>
+	</div>
+	
+	<div class="well well-large">
+	<h4>New Features Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="display: table-row;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+			</tbody>
+	</table>
+	</div>
+	
+</div>
+</body>
+</html>
