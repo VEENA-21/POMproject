@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 2, Errors: 0, Skipped: 10, Time elapsed: 1.544 s <<< FAILURE! - in TestSuite
-TestCaseDemo.Test1.openBrowser  Time elapsed: 1.096 s  <<< FAILURE!
+Tests run: 12, Failures: 2, Errors: 0, Skipped: 10, Time elapsed: 1.561 s <<< FAILURE! - in TestSuite
+TestCaseDemo.Test1.openBrowser  Time elapsed: 1.114 s  <<< FAILURE!
 org.openqa.selenium.remote.NoSuchDriverException: 
 Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
@@ -13,7 +13,7 @@ Driver info: driver.version: ChromeDriver
 Caused by: java.lang.IllegalStateException: chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
 	at TestCaseDemo.Test1.openBrowser(Test1.java:36)
 
-TestCaseDemo.Test2.setup  Time elapsed: 0.024 s  <<< FAILURE!
+TestCaseDemo.Test2.setup  Time elapsed: 0.023 s  <<< FAILURE!
 org.openqa.selenium.remote.NoSuchDriverException: 
 Unable to obtain: chromedriver, error chromedriver must exist: C:\JAR\chromedriver-win64\chromedriver.exe
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
