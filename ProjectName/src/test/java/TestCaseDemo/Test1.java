@@ -28,6 +28,8 @@ public class Test1 {
     }
 
     @BeforeMethod
+
+    // Open Brwoser
     public void openBrowser() throws Exception {
         logger = extent.createTest("Browser Setup");
 

@@ -26,6 +26,8 @@ public class Test2 {
     ExtentTest logger;
 
     @BeforeClass
+
+    // Steup the driver
     public void setup() {
         // Initialize Extent Reports
         extent = new ExtentReports();
